@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rCounter</title>
+</head>
+<body>
+	<div id="player1">
+		<a class="add">+</a>
+		<div class="life"></div>
+		<a class="subtract">-</a>
+	</div>
+	<div id="player2" data-health="20">
+		<a class="add">+</a>
+		<div class="life"></div>
+		<a class="subtract">-</a>
+	</div>
+	<div id="player3" data-health="20">
+		<a class="add">+</a>
+		<div class="life"></div>
+		<a class="subtract">-</a>
+	</div>
+	<div id="player4" data-health="20">
+		<a class="add">+</a>
+		<div class="life"></div>
+		<a class="subtract">-</a>
+	</div>
+	<script type="text/javascript">
+	
+		var players = {
+			1: document.getElementById('player1'),
+			2: document.getElementById('player2'),
+			3: document.getElementById('player3'),
+			4: document.getElementById('player4')
+		};
+
+		for(var player in players) {
+			// Set up life element
+			players[player].life = players[player].getElementsByClassName('life')[0];
+			players[player].addButton = players[player].getElementsByClassName('add')[0];
+			players[player].subtractButton = players[player].getElementsByClassName('subtract')[0];
+
+			// Set up functions
+			players[player].addButton.href = '#';
+			players[player].addButton.onclick = function() {
+				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) + 1;
+			};
+			players[player].subtractButton.href = '#';
+			players[player].subtractButton.onclick = function() {
+				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) - 1;
+			};
+
+		}
+
+		// Default Life
+		for(var player in players) {
+			players[player].life.innerHTML = 20;
+		}
+
+	</script>
+</body>
+</html>
