@@ -21,7 +21,8 @@
 
 .player .life {
 	margin: 0 120px;
-	float: left;
+	left: 0;
+	right: 0;
 }
 
 .player .add {
@@ -30,6 +31,7 @@
 
 .player .subtract {
 	float: right;
+	margin-left: auto;
 }
 
 #player1 {
