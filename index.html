@@ -2,24 +2,25 @@
 <html>
 <head>
 	<title>rCounter</title>
+	<LINK href="core/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div id="player1">
+	<div id="player1" class="player">
 		<a class="add">+</a>
 		<div class="life"></div>
 		<a class="subtract">-</a>
 	</div>
-	<div id="player2" data-health="20">
+	<div id="player2" class="player">
 		<a class="add">+</a>
 		<div class="life"></div>
 		<a class="subtract">-</a>
 	</div>
-	<div id="player3" data-health="20">
+	<div id="player3" class="player">
 		<a class="add">+</a>
 		<div class="life"></div>
 		<a class="subtract">-</a>
 	</div>
-	<div id="player4" data-health="20">
+	<div id="player4" class="player">
 		<a class="add">+</a>
 		<div class="life"></div>
 		<a class="subtract">-</a>
@@ -49,10 +50,7 @@
 				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) - 1;
 			};
 
-		}
-
-		// Default Life
-		for(var player in players) {
+			// Default Life
 			players[player].life.innerHTML = 20;
 		}
 
