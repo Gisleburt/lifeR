@@ -5,33 +5,41 @@
 	<LINK href="core/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div id="player1" class="player">
-		<a class="add">+</a>
-		<div class="life"></div>
-		<a class="subtract">-</a>
+	<div id="player1">
+		<div id="player1life" class="player">
+			<a class="subtract">-</a>
+			<a class="add">+</a>
+			<div class="life"></div>
+		</div>
 	</div>
-	<div id="player2" class="player">
-		<a class="add">+</a>
-		<div class="life"></div>
-		<a class="subtract">-</a>
+	<div id="player2">
+		<div id="player2life" class="player">
+			<a class="subtract">-</a>
+			<a class="add">+</a>
+			<div class="life"></div>
+		</div>
 	</div>
-	<div id="player3" class="player">
-		<a class="add">+</a>
-		<div class="life"></div>
-		<a class="subtract">-</a>
+	<div id="player3">
+		<div id="player3life" class="player">
+			<a class="subtract">-</a>
+			<a class="add">+</a>
+			<div class="life"></div>
+		</div>
 	</div>
-	<div id="player4" class="player">
-		<a class="add">+</a>
-		<div class="life"></div>
-		<a class="subtract">-</a>
+	<div id="player4">
+		<div id="player4life" class="player">
+			<a class="subtract">-</a>
+			<a class="add">+</a>
+			<div class="life"></div>
+		</div>
 	</div>
 	<script type="text/javascript">
 	
 		var players = {
-			1: document.getElementById('player1'),
-			2: document.getElementById('player2'),
-			3: document.getElementById('player3'),
-			4: document.getElementById('player4')
+			1: document.getElementById('player1life'),
+			2: document.getElementById('player2life'),
+			3: document.getElementById('player3life'),
+			4: document.getElementById('player4life')
 		};
 
 		for(var player in players) {
@@ -44,10 +52,12 @@
 			players[player].addButton.href = '#';
 			players[player].addButton.onclick = function() {
 				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) + 1;
+				return false;
 			};
 			players[player].subtractButton.href = '#';
 			players[player].subtractButton.onclick = function() {
 				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) - 1;
+				return false;
 			};
 
 			// Default Life

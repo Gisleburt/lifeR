@@ -1,46 +1,84 @@
 
 .player {
 	font-size: 30px;
-
-	height: 100px;
-	margin: 10px 100px;
+	margin: 10px;
 	text-align: center;
-	vertical-align: middle;
 	line-height: 100px;
-	clear: both;
+	overflow: hidden;
+	padding: 10px;
 }
 
 .player a {
 	height: 100px;
 	width: 100px;
-	display: block;
+	display: inline-block;
 	border: 1px solid black;
 	border-radius: 15px;
 	text-decoration: none;
 }
 
 .player .life {
-	margin: 0 120px;
-	left: 0;
-	right: 0;
-}
-
-.player .add {
-	float: left;
+	margin: 0 110px;
 }
 
 .player .subtract {
+	float: left;
+}
+
+.player .add {
 	float: right;
-	margin-left: auto;
 }
 
 #player1 {
 	position: absolute;
 	bottom: 0;
+	left: 110px;
+	right: 110px;
 }
+
 #player2 {
-	bottom: 0;
+	position: absolute;
+	top: 0;
+	left: 110px;
+	right: 110px;
+}
+
+#player3 {
+	position: absolute;
+	bottom: 110px;
+	left: 0;
+	top: 110px;
+	vertical-align: middle;
+}
+
+#player4 {
+	position: absolute;
+	bottom: 110px;
+	top: 110px;
+	right: 0;
+	vertical-align: middle;
+}
+
+#player1life {
+
+}
+#player2life {
+	left:0;
+	right:0;
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg); /* IE 9 */
 	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+#player3life {
+	left:0;
+	right:0;
+	transform:rotate(90deg);
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+#player4life {
+	transform:rotate(270deg);
+	-ms-transform:rotate(270deg); /* IE 9 */
+	-webkit-transform:rotate(270deg); /* Safari and Chrome */
 }
