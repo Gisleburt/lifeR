@@ -2,7 +2,11 @@
 <html>
 <head>
 	<title>lifeR</title>
-	<link href="core/style.css" rel="stylesheet" type="text/css">
+	<link href="core/core.css" rel="stylesheet" type="text/css">
+
+	<!-- Additional Style Sheets Go Here -->
+	<link href="life/life.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 	<section id="player1" class="player">
@@ -18,25 +22,18 @@
 	</section>
 
 	<!-- Add Module Code Here -->
-	<script type="text/javascript" src="core/life.js"></script>
+	<script type="text/javascript" src="life/life.js"></script>
+	<script type="text/javascript" src="life/lifeStyle.js"></script>
 
-	<!-- Application code -->
+	<!-- Application setup -->
 	<script type="text/javascript">
 		// Add your modules here
 		var modules = {
 			life : Life
 		};
-
-		var players = {
-			1: document.getElementById('player1'),
-			2: document.getElementById('player2'),
-			3: document.getElementById('player3'),
-			4: document.getElementById('player4')
-		};
-
-		for(var p in players)
-			for(m in modules)
-				players[p].m = new modules[m](players[p]);
 	</script>
+
+	<!-- Core Application -->
+	<script type="text/javascript" src="core/core.js"></script>
 </body>
 </html>

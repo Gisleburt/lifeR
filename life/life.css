@@ -1,0 +1,48 @@
+.lifeContainer {
+	border-left: 3px solid green;
+	border-right: 3px solid red;
+}
+
+.lifeContainer a {
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 15px;
+	text-decoration: none;
+}
+
+.lifeContainer .life {
+	margin: 0 110px;
+	display: block;
+}
+
+.lifeContainer .subtract {
+	float: left;
+}
+
+.lifeContainer .add {
+	float: right;
+}
+
+#player1life {
+
+}
+#player2life {
+	left:0;
+	right:0;
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); /* IE 9 */
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+#player3life {
+	transform:rotate(90deg);
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+#player4life {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+}

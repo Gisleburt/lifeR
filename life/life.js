@@ -52,7 +52,7 @@ Life.prototype.addLifeContainer = function(player) {
 // Get and set life.
 Object.defineProperty(Life.prototype, "life", {
 	get: function() { return Number(this.player.getElementsByClassName('life')[0].innerHTML) },
-	set: function(value) { console.log(value); this.player.getElementsByClassName('life')[0].innerHTML = Number(value) }
+	set: function(value) { this.player.getElementsByClassName('life')[0].innerHTML = Number(value) }
 });
 
 
