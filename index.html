@@ -17,7 +17,15 @@
 	<section id="player4" class="player">
 	</section>
 
+	<!-- Add Module Code Here -->
+	<script type="text/javascript" src="core/life.js"></script>
+
+	<!-- Application code -->
 	<script type="text/javascript">
+		// Add your modules here
+		var modules = {
+			life : Life
+		};
 
 		var players = {
 			1: document.getElementById('player1'),
@@ -26,13 +34,9 @@
 			4: document.getElementById('player4')
 		};
 
-		for(player in players) {
-			players[player].modules = {};
-		}
-
-
+		for(var p in players)
+			for(m in modules)
+				players[p].m = new modules[m](players[p]);
 	</script>
-	<!-- Add Modules Here -->
-	<script src="core/life.js"></script>
 </body>
 </html>

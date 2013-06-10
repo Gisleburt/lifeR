@@ -27,14 +27,14 @@ Life.prototype.addLifeContainer = function(player) {
 		subtract           = document.createElement('a');
 		subtract.className = 'subtract';
 		subtract.href      = '#';
-		subtract.onclick   = function() { parentObj.life--;};
+		subtract.onclick   = function() { parentObj.life--; return false; };
 		subtract.appendChild(subtractText);
 
 		addText       = document.createTextNode('+');
 		add           = document.createElement('a');
 		add.className = 'add';
 		add.href      = '#';
-		add.onclick   = function() { parentObj.life++;};
+		add.onclick   = function() { parentObj.life++; return false; };
 		add.appendChild(addText);
 
 		life           = document.createElement('span');
@@ -55,9 +55,4 @@ Object.defineProperty(Life.prototype, "life", {
 	set: function(value) { console.log(value); this.player.getElementsByClassName('life')[0].innerHTML = Number(value) }
 });
 
-for(var player in players) {
-
-	players[player].modules.life = new Life(players[player]);
-
-}
 
