@@ -19,6 +19,7 @@
 
 .player .life {
 	margin: 0 110px;
+	display: block;
 }
 
 .player .subtract {

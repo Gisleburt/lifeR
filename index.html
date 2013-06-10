@@ -2,68 +2,37 @@
 <html>
 <head>
 	<title>rCounter</title>
-	<LINK href="core/style.css" rel="stylesheet" type="text/css">
+	<link href="core/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div id="player1">
-		<div id="player1life" class="player">
-			<a class="subtract">-</a>
-			<a class="add">+</a>
-			<div class="life"></div>
-		</div>
-	</div>
-	<div id="player2">
-		<div id="player2life" class="player">
-			<a class="subtract">-</a>
-			<a class="add">+</a>
-			<div class="life"></div>
-		</div>
-	</div>
-	<div id="player3">
-		<div id="player3life" class="player">
-			<a class="subtract">-</a>
-			<a class="add">+</a>
-			<div class="life"></div>
-		</div>
-	</div>
-	<div id="player4">
-		<div id="player4life" class="player">
-			<a class="subtract">-</a>
-			<a class="add">+</a>
-			<div class="life"></div>
-		</div>
-	</div>
+	<section id="player1" class="player">
+	</section>
+
+	<section id="player2" class="player">
+	</section>
+
+	<section id="player3" class="player">
+	</section>
+
+	<section id="player4" class="player">
+	</section>
+
 	<script type="text/javascript">
-	
+
 		var players = {
-			1: document.getElementById('player1life'),
-			2: document.getElementById('player2life'),
-			3: document.getElementById('player3life'),
-			4: document.getElementById('player4life')
+			1: document.getElementById('player1'),
+			2: document.getElementById('player2'),
+			3: document.getElementById('player3'),
+			4: document.getElementById('player4')
 		};
 
-		for(var player in players) {
-			// Set up life element
-			players[player].life = players[player].getElementsByClassName('life')[0];
-			players[player].addButton = players[player].getElementsByClassName('add')[0];
-			players[player].subtractButton = players[player].getElementsByClassName('subtract')[0];
-
-			// Set up functions
-			players[player].addButton.href = '#';
-			players[player].addButton.onclick = function() {
-				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) + 1;
-				return false;
-			};
-			players[player].subtractButton.href = '#';
-			players[player].subtractButton.onclick = function() {
-				this.parentNode.life.innerHTML = Number(this.parentNode.life.innerHTML) - 1;
-				return false;
-			};
-
-			// Default Life
-			players[player].life.innerHTML = 20;
+		for(player in players) {
+			players[player].modules = {};
 		}
 
+
 	</script>
+	<!-- Add Modules Here -->
+	<script src="core/life.js"></script>
 </body>
 </html>
