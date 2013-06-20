@@ -1,0 +1,3 @@
+# Manifest files can have any extension but must be served
+# with the following MIME type.
+AddType text/cache-manifest .manifest

@@ -4,7 +4,3 @@ var players = {
 	3: document.getElementById('player3'),
 	4: document.getElementById('player4')
 };
-
-for(var p in players)
-	for(m in modules)
-		players[p].m = new modules[m](players[p]);

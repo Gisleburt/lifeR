@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>lifeR</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
 	<link href="core/core.css" rel="stylesheet" type="text/css">
 
 	<!-- Additional Style Sheets Go Here -->
@@ -21,19 +24,28 @@
 	<section id="player4" class="player">
 	</section>
 
+	<!-- Core Application -->
+	<script type="text/javascript" src="core/localStorage.js"></script>
+	<script type="text/javascript" src="core/core.js"></script>
+
 	<!-- Add Module Code Here -->
 	<script type="text/javascript" src="life/life.js"></script>
 	<script type="text/javascript" src="life/lifeStyle.js"></script>
 
 	<!-- Application setup -->
 	<script type="text/javascript">
+
 		// Add your modules here
 		var modules = {
 			life : Life
 		};
+
+		for(var p in players)
+			for(m in modules)
+				players[p].m = new modules[m](players[p]);
+
+		console.log(players);
 	</script>
 
-	<!-- Core Application -->
-	<script type="text/javascript" src="core/core.js"></script>
 </body>
 </html>
